@@ -82,9 +82,11 @@ module.exports = {
 
     async indexByHashtagId(req, res){
         try{
-            const { hashtag } = req.body;
+            console.log(req.params.hash); 
+            
+            const { hash } = req.params;
 
-            const byhash = await Group.find({ hashtag: hashtag }).populate(['user', 'hashtag']);
+            const byhash = await Group.find({ hashtag: hash }).populate(['user', 'hashtag']);
 
             return res.json(byhash);
         } catch (err){

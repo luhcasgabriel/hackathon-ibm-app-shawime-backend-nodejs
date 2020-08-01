@@ -79,4 +79,4 @@ io.on('connection', socket => {
 
 })
 
-server.listen((proces.env.PORT + 1 ) || 3003);
+server.listen((process.env.PORT + 1 ) || 3003);
